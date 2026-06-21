@@ -2,7 +2,6 @@
 
 A web-based system that generates personalized wedding invitation and contribution letters for multiple recipients. Built using HTML, CSS, and JavaScript (Canvas API).
 
----
 
 ## ✨ Features
 
@@ -14,7 +13,6 @@ A web-based system that generates personalized wedding invitation and contributi
 - 🔐 Simple password-protected access system
 - 🎨 Clean and responsive UI design
 
----
 
 ## 🧠 How It Works
 
@@ -27,8 +25,6 @@ A web-based system that generates personalized wedding invitation and contributi
    - Writes recipient name on canvas
    - Generates and downloads personalized image
 
----
-
 ## 🛠️ Tech Stack
 
 - HTML5
@@ -37,7 +33,3 @@ A web-based system that generates personalized wedding invitation and contributi
 - Canvas API
 - Bootstrap Icons
 - Google Fonts
-
----
-
-## 📂 Project Structure
