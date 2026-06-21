@@ -1,0 +1,395 @@
+
+/* ===========================
+   WASSO MARRIES ANNA
+   STYLE SHEET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(
+        135deg,
+        #eaf4ff 0%,
+        #d7ebff 30%,
+        #f8fbff 100%
+    );
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* ===========================
+   FLOATING FLOWERS
+=========================== */
+
+.flower{
+    position:fixed;
+    font-size:2rem;
+    opacity:0.25;
+    z-index:0;
+    pointer-events:none;
+}
+
+.flower-1{
+    left:5%;
+    top:15%;
+    animation:floatFlower 10s ease-in-out infinite;
+}
+
+.flower-2{
+    right:8%;
+    top:25%;
+    animation:floatFlower 12s ease-in-out infinite;
+}
+
+.flower-3{
+    left:10%;
+    bottom:15%;
+    animation:floatFlower 14s ease-in-out infinite;
+}
+
+.flower-4{
+    right:10%;
+    bottom:20%;
+    animation:floatFlower 16s ease-in-out infinite;
+}
+
+@keyframes floatFlower{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-25px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ===========================
+   LOGIN PAGE
+=========================== */
+
+.login-card{
+
+    width:100%;
+    max-width:600px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.12);
+
+    position:relative;
+
+    z-index:10;
+}
+
+.main-title{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    color:#0d6efd;
+
+    margin-bottom:15px;
+}
+
+.sub-title{
+
+    color:#3d5a80;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+}
+
+.welcome-text{
+
+    color:#6c757d;
+
+    font-size:1rem;
+
+    line-height:1.8;
+}
+
+/* ===========================
+   LOGIN BUTTON
+=========================== */
+
+#loginBtn{
+
+    background:#0d6efd;
+
+    border:none;
+
+    border-radius:15px;
+
+    transition:0.3s;
+}
+
+#loginBtn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 20px rgba(13,110,253,0.3);
+}
+
+/* ===========================
+   GENERATOR HEADER
+=========================== */
+
+.generator-header{
+
+    margin-bottom:35px;
+}
+
+.generator-title{
+
+    font-family:'Playfair Display',serif;
+
+    color:#0d6efd;
+
+    font-weight:800;
+
+    font-size:3rem;
+}
+
+.generator-subtitle{
+
+    color:#3d5a80;
+
+    font-weight:600;
+
+    margin-top:10px;
+}
+
+.generator-description{
+
+    color:#6c757d;
+
+    margin-top:10px;
+}
+
+/* ===========================
+   GENERATOR CARD
+=========================== */
+
+.generator-card{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:white;
+
+    z-index:10;
+
+    position:relative;
+}
+
+.generator-card .card-body{
+
+    padding:40px;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.form-control,
+.form-select{
+
+    border-radius:12px;
+
+    min-height:52px;
+
+    border:1px solid #d8e3f0;
+
+    transition:0.3s;
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:
+    0 0 0 0.2rem
+    rgba(13,110,253,.15);
+}
+
+/* ===========================
+   GENERATE BUTTON
+=========================== */
+
+#generateBtn{
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:14px 35px;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+    background:
+    linear-gradient(
+        135deg,
+        #198754,
+        #20c997
+    );
+}
+
+#generateBtn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(25,135,84,.35);
+}
+
+/* ===========================
+   TABLE HEADER ROW
+=========================== */
+
+strong{
+
+    color:#0d6efd;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer-section{
+
+    margin-top:50px;
+
+    color:#3d5a80;
+
+    position:relative;
+
+    z-index:10;
+}
+
+.footer-section strong{
+
+    color:#0d6efd;
+}
+
+/* ===========================
+   MOBILE RESPONSIVENESS
+=========================== */
+
+@media(max-width:768px){
+
+    .main-title{
+
+        font-size:2rem;
+    }
+
+    .generator-title{
+
+        font-size:2rem;
+    }
+
+    .login-card{
+
+        padding:25px;
+    }
+
+    .generator-card .card-body{
+
+        padding:20px;
+    }
+
+    .form-control,
+    .form-select{
+
+        min-height:48px;
+    }
+
+    #generateBtn{
+
+        width:100%;
+    }
+}
+
+/* ===========================
+   NICE ENTRY ANIMATION
+=========================== */
+
+.login-card,
+.generator-card{
+
+    animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eaf4ff;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0d6efd;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0b5ed7;
+}
+

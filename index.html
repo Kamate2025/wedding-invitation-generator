@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wasso Marries Anna | Invitation Generator</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Decorative Flowers -->
+    <div class="flower flower-1">🌸</div>
+    <div class="flower flower-2">🌺</div>
+    <div class="flower flower-3">🌼</div>
+    <div class="flower flower-4">💐</div>
+
+    <!-- ========================================= -->
+    <!-- LOGIN SECTION -->
+    <!-- ========================================= -->
+
+    <section
+        id="loginSection"
+        class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
+
+        <div class="login-card">
+
+            <div class="text-center">
+
+                <h1 class="main-title">
+                    💍 Wasso Marries Anna
+                </h1>
+
+                <h4 class="sub-title">
+                    Invitation & Contribution Letter Generation System
+                </h4>
+
+                <p class="welcome-text">
+                    Generate personalized invitation and contribution
+                    letters in English and French.
+                </p>
+
+            </div>
+
+            <div class="mt-4">
+
+                <label class="form-label fw-semibold">
+                    System Password
+                </label>
+
+                <input
+                    type="password"
+                    id="passwordInput"
+                    class="form-control form-control-lg"
+                    placeholder="Enter Password">
+
+                <div
+                    id="loginError"
+                    class="text-danger mt-2 small">
+                </div>
+
+                <button
+                    id="loginBtn"
+                    class="btn btn-primary btn-lg w-100 mt-4">
+
+                    <i class="bi bi-unlock-fill"></i>
+
+                    Access Generator
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- GENERATOR SECTION -->
+    <!-- ========================================= -->
+
+    <section
+        id="generatorSection"
+        class="container py-5"
+        style="display:none;">
+
+        <div class="generator-header text-center">
+
+            <h1 class="generator-title">
+                💙 Wasso Marries Anna
+            </h1>
+
+            <h4 class="generator-subtitle">
+                Invitation & Contribution Letter Generator
+            </h4>
+
+            <p class="generator-description">
+                Generate personalized invitation and contribution letters in English and French.
+            </p>
+
+        </div>
+
+        <div class="card shadow-lg border-0 generator-card">
+
+            <div class="card-body p-4">
+
+                <!-- Column Headers -->
+
+                <div class="row mb-4">
+
+                    <div class="col-md-8">
+                        <strong>Recipient Name</strong>
+                    </div>
+
+                    <div class="col-md-4">
+                        <strong>Language</strong>
+                    </div>
+
+                </div>
+
+                <!-- Dynamic Recipient Container -->
+
+                <div id="recipientContainer">
+
+                    <div class="row g-3 mb-3 recipient-row">
+
+                        <div class="col-md-8">
+
+                            <input
+                                type="text"
+                                class="form-control recipient-name"
+                                placeholder="Recipient Name">
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <select
+                                class="form-select recipient-language">
+
+                                <option value="en">
+                                    English
+                                </option>
+
+                                <option value="fr">
+                                    French
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Add Recipient Button -->
+
+                <div class="text-center mb-4">
+
+                    <button
+                        id="addRecipientBtn"
+                        type="button"
+                        class="btn btn-outline-primary">
+
+                        <i class="bi bi-plus-circle"></i>
+
+                        Add Recipient
+
+                    </button>
+
+                </div>
+
+                <!-- Generate Button -->
+
+                <div class="text-center">
+
+                    <button
+                        id="generateBtn"
+                        class="btn btn-success btn-lg px-5">
+
+                        <i class="bi bi-download"></i>
+
+                        Generate Invitations
+
+                    </button>
+
+                </div>
+
+                <!-- Success Message Placeholder -->
+
+                <div
+                    id="successMessageContainer"
+                    class="mt-4">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- HIDDEN CANVAS -->
+    <!-- ========================================= -->
+
+    <canvas
+        id="invitationCanvas"
+        style="display:none;">
+    </canvas>
+
+    <!-- ========================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================= -->
+
+    <footer
+        class="text-center py-4 footer-section">
+
+        <p class="mb-1">
+
+            Generated by
+            <strong>Kamate Group Ltd</strong>
+
+        </p>
+
+        <small>
+
+            Led by Kamate Ntuyenabo
+
+        </small>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
